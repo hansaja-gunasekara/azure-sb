@@ -1,10 +1,7 @@
 import axios, { CanceledError } from "axios";
-require("dotenv").config();
-
-const BASE_URL = process.env.BASE_URL;
 
 const axiosInstance = axios.create({
-  baseURL: BASE_URL,
+  baseURL: "https://seatb.azurewebsites.net/api",
 });
 
 class APIClient {
