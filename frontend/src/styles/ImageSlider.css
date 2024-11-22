@@ -1,0 +1,53 @@
+.image-slider-container {
+  width: 40%;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.each-slide-effect > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
+.react-slideshow-container .default-nav {
+  display: none;
+}
+
+.react-slideshow-container .nav {
+  z-index: 1;
+}
+
+.react-slideshow-container .nav:first-of-type {
+  left: 10px;
+}
+
+.react-slideshow-container .nav:last-of-type {
+  right: 10px;
+}
+
+.react-slideshow-container .indicators {
+  position: absolute;
+  bottom: 10px;
+  width: 40%;
+  text-align: center;
+  z-index: 10;
+}
+
+.react-slideshow-container .indicators > div {
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.react-slideshow-container .indicators > div.active {
+  background-color: #fff;
+}
