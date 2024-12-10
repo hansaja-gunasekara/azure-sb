@@ -43,7 +43,7 @@ const Login = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const {login} = useAuth();
+  const { login } = useAuth();
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -55,7 +55,7 @@ const Login = () => {
   }, [location, navigate]);
 
   const handleLogin = () => {
-    window.location.href = `https://azure-reservation-app.azurewebsites.net/api/auth/google`;
+    window.location.href = `https://moviebookings.azurewebsites.net/api/auth/google`;
   };
 
   return (
