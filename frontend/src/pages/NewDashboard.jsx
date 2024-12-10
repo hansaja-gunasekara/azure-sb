@@ -95,7 +95,6 @@ const NewDashboard = () => {
 
   return (
     <>
-      {authToken && <Navigate to="/signin" replace={true} />}
       <ThemeProvider theme={darkTheme}>
         <Box
           sx={{
