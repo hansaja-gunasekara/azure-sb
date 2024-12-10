@@ -12,7 +12,7 @@ passport.use(
       clientID: GOOGLE_CLIENT_ID,
       clientSecret: GOOGLE_CLIENT_SECRET,
       callbackURL:
-        "https://azure-reservation-app.azurewebsites.net/api/auth/google/callback",
+        "https://moviebookings.azurewebsites.net/api/auth/google/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
       // Find or create user in the database
