@@ -26,9 +26,9 @@ const router = createBrowserRouter([
       {
         index: true,
         element: (
-          <ProtectedRoute>
-            <NewDashboard />
-          </ProtectedRoute>
+          // <ProtectedRoute>
+          <NewDashboard />
+          // </ProtectedRoute>
         ),
       },
       {
