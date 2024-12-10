@@ -59,7 +59,7 @@ const AllBookings = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "https://azure-reservation-app.azurewebsites.net/api/bookings"
+          "https://moviebookings.azurewebsites.net/api/bookings"
         );
         setOrders(response.data);
       } catch (error) {

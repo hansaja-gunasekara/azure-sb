@@ -30,7 +30,7 @@ const DateScroller = () => {
     const fetchShowtimes = async () => {
       try {
         const response = await axios.get(
-          "https://azure-reservation-app.azurewebsites.net/api/showtimes",
+          "https://moviebookings.azurewebsites.net/api/showtimes",
           {
             params: {
               theater: theaterId,

@@ -12,7 +12,6 @@ import axios from "axios";
 import { useAuth } from "../Context/AuthContext";
 import Swal from "sweetalert2";
 
-
 const ContentWrapper = styled(Box)({
   padding: "24px",
   width: "204vh",
@@ -90,7 +89,7 @@ const MyBooking = () => {
   const fetchOrders = async () => {
     try {
       const response = await axios.post(
-        "https://azure-reservation-app.azurewebsites.net/api/bookings/customer",
+        "https://moviebookings.azurewebsites.net/api/bookings/customer",
         { customerEmail }
       );
       setOrders(
@@ -121,7 +120,7 @@ const MyBooking = () => {
       }).then(async (result) => {
         if (result.isConfirmed) {
           const res = await axios.delete(
-            `https://azure-reservation-app.azurewebsites.net/api/bookings/${bookingId}`
+            `https://moviebookings.azurewebsites.net/api/bookings/${bookingId}`
           );
           console.log("Booking canceled:", res.data);
           fetchOrders();

@@ -13,7 +13,6 @@ import { ToastContainer, toast, Bounce } from "react-toastify";
 import CloudUploadIcon from "@mui/icons-material/CloudUpload";
 import { styled } from "@mui/system";
 
-
 const VisuallyHiddenInput = styled("input")({
   clip: "rect(0 0 0 0)",
   clipPath: "inset(50%)",
@@ -89,11 +88,11 @@ const AdminSeatConfigurator = () => {
         location, // Theater location
         theater, // Theater ID or name
         sections, // Sections with seat layouts
-        image
+        image,
       };
       console.log(requestBody);
       const response = await axios.post(
-        "https://azure-reservation-app.azurewebsites.net/api/seats/create",
+        "https://moviebookings.azurewebsites.net/api/seats/create",
         requestBody
       );
       toast.success("Theater added successfully!", {

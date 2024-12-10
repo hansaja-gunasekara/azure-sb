@@ -18,7 +18,7 @@ const TheaterForm = () => {
     const fetchTheaters = async () => {
       try {
         const response = await axios.get(
-          "https://azure-reservation-app.azurewebsites.net/api/theaters"
+          "https://moviebookings.azurewebsites.net/api/theaters"
         ); // Replace with your API endpoint
         setTheaters(response.data);
         console.log("Theaters:", response.data);

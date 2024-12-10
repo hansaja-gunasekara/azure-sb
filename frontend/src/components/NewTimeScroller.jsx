@@ -85,7 +85,7 @@ const TimeScroller = ({ onTimeSelect }) => {
       setLoading(true);
       try {
         const response = await axios.get(
-          "https://azure-reservation-app.azurewebsites.net/api/showtimes",
+          "https://moviebookings.azurewebsites.net/api/showtimes",
           {
             params: {
               theater: theaterId,

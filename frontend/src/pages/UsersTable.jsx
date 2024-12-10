@@ -63,7 +63,7 @@ const UsersTable = () => {
   const fetchUsers = async () => {
     try {
       const response = await axios.get(
-        "https://azure-reservation-app.azurewebsites.net/api/user"
+        "https://moviebookings.azurewebsites.net/api/user"
       );
       setUsers(response.data);
     } catch (error) {
@@ -87,7 +87,7 @@ const UsersTable = () => {
     if (result.isConfirmed) {
       try {
         await axios.put(
-          `https://azure-reservation-app.azurewebsites.net/api/users/${id}`
+          `https://moviebookings.azurewebsites.net/api/users/${id}`
         );
         Swal.fire({
           title: "Deleted!",

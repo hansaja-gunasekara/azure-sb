@@ -53,7 +53,7 @@ const ConfirmButton = styled(Button)({
 const bookSeat = async (bookingDataStr, userId, accessToken) => {
   try {
     const response = await axios.post(
-      "https://azure-reservation-app.azurewebsites.net/api/create-calendar-event",
+      "https://moviebookings.azurewebsites.net/api/create-calendar-event",
       {
         userId: userId,
         bookingDate: bookingDataStr.bookingDate,
@@ -99,7 +99,7 @@ const BookingDetails = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         seatService
-          .CreateSeat({ theaterId, selectedSeats})
+          .CreateSeat({ theaterId, selectedSeats })
           .then((response) => {
             console.log(response.data);
             bookingService
@@ -184,9 +184,7 @@ const BookingDetails = () => {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <DetailLabel variant="h6">Ref No</DetailLabel>
-            <DetailValue variant="body1">
-              tfe888gujw
-            </DetailValue>
+            <DetailValue variant="body1">tfe888gujw</DetailValue>
           </Grid>
 
           <Grid item xs={6}>

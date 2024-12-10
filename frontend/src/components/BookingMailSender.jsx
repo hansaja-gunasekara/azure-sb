@@ -150,7 +150,7 @@ const BookingMailSender = () => {
       }).then(async (result) => {
         if (result.isConfirmed) {
           await axios
-            .post("https://azure-reservation-app.azurewebsites.net/api/mail", {
+            .post("https://moviebookings.azurewebsites.net/api/mail", {
               emails,
               subject,
               message,
@@ -168,7 +168,6 @@ const BookingMailSender = () => {
             });
         }
       });
-
     } catch (error) {
       console.error("Error sending emails:", error);
     }
@@ -176,7 +175,9 @@ const BookingMailSender = () => {
 
   return (
     <Box sx={styles.container}>
-      <Typography variant="h4" sx={{ marginBottom: "24px" }}>Send email for booked users</Typography>
+      <Typography variant="h4" sx={{ marginBottom: "24px" }}>
+        Send email for booked users
+      </Typography>
 
       {/* Search Filters */}
       <Box sx={{ display: "grid", gap: "16px", marginBottom: "24px" }}>

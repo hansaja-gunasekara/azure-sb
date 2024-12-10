@@ -66,7 +66,7 @@ const ScannedBookingDetails = () => {
       }).then(async (result) => {
         if (result.isConfirmed) {
           const res = await axios.delete(
-            `https://azure-reservation-app.azurewebsites.net/api/bookings/${bookingId}`
+            `https://moviebookings.azurewebsites.net/api/bookings/${bookingId}`
           );
           refetch();
           console.log("Booking canceled:", res.data);
@@ -123,9 +123,7 @@ const ScannedBookingDetails = () => {
             <ActionButton onClick={() => handleCancelBooking(data?._id)}>
               Release Booking
             </ActionButton>
-          ) : (
-            null
-          )}
+          ) : null}
         </Grid>
       </Grid>
     </RadiantBox>
