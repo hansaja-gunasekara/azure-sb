@@ -12,6 +12,7 @@ import useGameQueryStore from "../store";
 import { CSSTransition } from "react-transition-group";
 import "../styles/NewDashboard.css"; // Import the CSS file for animations
 import { styled } from "@mui/material/styles";
+import { useAuth } from "../Context/AuthContext";
 
 const RadiantBox = styled(Box)(({ theme }) => ({
   position: "relative",
@@ -52,6 +53,8 @@ const darkTheme = createTheme({
 });
 
 const NewDashboard = () => {
+  const { authToken } = useAuth();
+
   const [activeButton, setActiveButton] = useState("home");
 
   const selectedCard = useGameQueryStore((s) => s.selectedCard);
@@ -92,6 +95,7 @@ const NewDashboard = () => {
 
   return (
     <>
+      {authToken && <Navigate to="/signin" replace={true} />}
       <ThemeProvider theme={darkTheme}>
         <Box
           sx={{
